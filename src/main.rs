@@ -1,10 +1,10 @@
 use std::fs::File;
-use std::io::{BufReader, BufRead};
+use std::io::{BufRead, BufReader};
 
-use clap::Parser;
 use anyhow::Result;
+use clap::Parser;
 
-#[derive(Debug,Parser)]
+#[derive(Debug, Parser)]
 struct Args {
     #[arg(help = "検索ワード")]
     search_word: String,
