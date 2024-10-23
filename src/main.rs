@@ -25,7 +25,7 @@ fn hostgrep(path: &str, word: String) -> Result<()> {
 
     for line in buf.lines() {
         let line = line?;
-        if line.contains(&word) {
+        if line.contains(&word) && !line.trim().starts_with('#') {
             println!("{}", line);
         }
     }
